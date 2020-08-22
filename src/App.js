@@ -1,26 +1,45 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Toolbar from './components/Layout/Toolbar/Toolbar';
+import SideDrawer from './components/Layout/SideDrawer/SideDrawer';
+import Backdrop from './components/Layout/Backdrop/Backdrop';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+class App extends React.Component {
+  state = {
+    sideDrawerOpen: false
+  };
+
+  drawerToggleClickHandler = () => {
+    this.setState((prevState) => {
+      return {sideDrawerOpen: !prevState.sideDrawerOpen};
+    });
+  };
+  
+  backdropClickHandler = () => {
+    // can be add other functionality such as modal to close it.
+    this.setState({ sideDrawerOpen: false });
+  };
+
+  render() {
+    let sideDrawer;
+    let backdrop;
+
+    if(this.state.sideDrawerOpen) {
+      sideDrawer = <SideDrawer />;
+      backdrop = <Backdrop click={this.backdropClickHandler} />;
+    }
+
+    return (
+    <div style={{height: '100%'}}>
+      <Toolbar drawerClickHandler={this.drawerToggleClickHandler} />
+      {sideDrawer}
+      {backdrop}
+      <main style={{marginTop: '64px'}}>
+        <p>This is the page content.</p>
+      </main>
+      
     </div>
   );
+}
 }
 
 export default App;
