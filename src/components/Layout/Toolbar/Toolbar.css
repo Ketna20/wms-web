@@ -50,3 +50,9 @@
     color: lightgreen;
     font-size: large;
 }
+
+@media (max-width: 760px) {
+    .toolbar-navigation-items {
+        display: none;
+    }
+}
