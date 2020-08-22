@@ -39,12 +39,10 @@
     color: #2210e9;
 }
 
-
- /* if need to disable sidedrawer in desktop mode then do following */
- /* @media (min-width: 761px) {
+@media (min-width: 761px) {
      .sideDrawer {
          display: none;
      }
- } */
+ }
 
 
