@@ -33,9 +33,9 @@ class App extends React.Component {
       <Toolbar drawerClickHandler={this.drawerToggleClickHandler} />
       <SideDrawer show={this.state.sideDrawerOpen} />
       {backdrop}
-      <main style={{marginTop: '64px'}}>
+      {/* <main style={{marginTop: '64px'}}>
         <p>This is the page content.</p>
-      </main>
+      </main> */}
       
     </div>
   );
