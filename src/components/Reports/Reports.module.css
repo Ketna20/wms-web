@@ -1,12 +1,21 @@
+.Reports {
+    margin-left: 20px;
+    color: #4095bf;
+    font-weight: bold;
+    font-size: large;
+}
+
 .Table {
     border-collapse: collapse;
     margin: auto;
     width: 90%;
     font-size: 0.9em;
     min-width: 400px;
+    border-bottom: #4095bf;
     border-radius: 5px 5px 0 0;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    
 }
 
 .Table thead tr {
@@ -45,15 +54,13 @@
     border-bottom: 2px solid #dddddd;
 }
 
-.Table tbody tr:last-of-type {
+.Table tbody tr:nth-last-child {
     border-bottom: #4095bf;
 }
 
 .Table tbody tr:nth-child(even) {
     background-color: #f3f3f3;
  }
-
- 
 
 .Table tbody tr:hover {
     background-color: #aedbf2;

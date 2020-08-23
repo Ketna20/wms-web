@@ -29,7 +29,7 @@ class Reports extends React.Component {
         });
         return (
             <div>
-                <p>This is the Reports Page.</p>
+                <p className={classes.Reports}>TD Ameritrade Transactions</p>
                 <table className={classes.Table}>
                   <thead>
                     <tr>

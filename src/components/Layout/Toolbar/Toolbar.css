@@ -19,6 +19,9 @@
 .toolbar-logo {
     margin-left: 1rem;
 }
+.logo {
+    font-weight: bold;
+}
 
 .toolbar-logo a {
     color: white;
